@@ -167,6 +167,7 @@ console.log(`------ [array] Spread ------`)
 let array1 = [1, 2, 3]
 let array2 = [...array1, 4, 5]
 console.log(array2) // [1, 2, 3, 4, 5]
+console.log("\n")
 
 /*** Function ***/
 console.log(`------ [Function] Spread ------`)
@@ -182,10 +183,75 @@ function addList(list, ...args) { // rest parameter have to pass in end of list-
 }
 
 console.log(addList([1], 2, 3)) // [1, 2, 3]
+console.log("\n")
 
 /*** Object ***/
 console.log(`------ [Object] Spread ------`)
 let obj1 = { a: 1, b: 2, c: 3 }
 let obj2 = { ...obj1, d: 99 }
 console.log(obj2)
+console.log("\n")
+
+
+/* ______________________________________________ Destructuring javascript ______________________________________________*/
+
+/**
+ * Destructuring is syntax to accept assignment attributes of object or element of array,
+ * make the code better.
+ */
+
+/*** Variable assignment ***/
+console.log(`------ [Variable assignment] Destructuring javascript ------`)
+const rest = [1, 2, 3, 4]
+const [a, b, c] = rest
+console.log(a, b, c) // 1, 2, 3
+console.log("\n")
+
+/*** Swapping ***/
+console.log(`------ [Swapping] Destructuring javascript ------`)
+var swap1 = 1;
+var swap2 = 2;
+var [swap1, swap2] = [swap2, swap1];
+console.log(`swap1: ${swap1}, swap2: ${swap2}`)
+console.log("\n")
+
+/*** Ignoring values ***/
+// 
+var IgnoringA = 0, IgnoringB = 1
+const ignoring = () => [1, 2, 3]
+const [IgnoringA, , IgnoringB] = ignoring()
+console.log(IgnoringA, IgnoringB); // 1, 3
+
+/*** Assignment to new variables ***/
+const res = { blog: 'abc.com', type: 'javascript' }
+const { blog: nameBlog, type: newType } = res;
+console.log(nameBlog, newType); // abc.com, javascript
+
+/***  Nested object ***/
+const blogs = {
+  anonystick: [
+    {
+      pageFacebook: 'Tip javascript Viet Nam',
+      likes: 4789,
+      daily: 1323
+    }
+  ]
+}
+
+const {
+  anonystick: [
+    {
+      pageFacebook: namePage,
+      likes: numLikes,
+      daily: numDaily
+    }
+  ]
+} = blogs;
+
+console.log(namePage, numLikes, numDaily); // Tip javascript Viet Nam, 4789, 1323
+
+// namePage, numLikes, numDaily get value from `blog object`
+
+/*** array destructuring ***/
+// i think still don't understand it !!!
 
