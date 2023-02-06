@@ -196,7 +196,7 @@ console.log("\n")
 /* ______________________________________________ Destructuring javascript ______________________________________________*/
 
 /**
- * Destructuring is syntax to accept assignment attributes of object or element of array,
+ * Destructuring is syntax to get attributes of object or element of array,
  * make the code better.
  */
 
