@@ -1,6 +1,8 @@
 
 /* ______________________________________________ var, let, const ______________________________________________*/
 
+// reference: https://viblo.asia/p/phan-biet-kieu-bien-var-let-va-const-trong-javascript-ORNZqaOnZ0n
+
 /* block-scope: declare once in single scope
  * hosting: variable declare moved to top of scope before execution
  */
