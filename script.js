@@ -2,7 +2,7 @@
 /* ______________________________________________ var, let, const ______________________________________________*/
 
 /* block-scope: declare once in single scope
- * variable declare moved to top of scope before execution
+ * hosting: variable declare moved to top of scope before execution
  */
 
 // ------------- var -------------
