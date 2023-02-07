@@ -274,6 +274,8 @@ console.log(namePage, numLikes, numDaily); // Tip javascript Viet Nam, 4789, 132
 
 /* ______________________________________________ Functions of array in JS ______________________________________________*/
 
+// references: https://www.w3schools.com/jsref/jsref_concat_array.asp
+
 /*** concat ***/
 // this method concatenates (joins) 1 or more arrays and return 1 array once, does not change the existing arrays
 console.log(`------ [concat] Functions of array in JS ------`)
