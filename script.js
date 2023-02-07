@@ -255,3 +255,17 @@ console.log(namePage, numLikes, numDaily); // Tip javascript Viet Nam, 4789, 132
 
 
 /* ______________________________________________ Arrow Function ______________________________________________*/
+
+/**
+ * Arrow function is a shorthand for writing anonymous function in JavaScript.
+ * Arrow function don't have their own 'this' keyword, the inhetrit 'this' value from surrounding context,
+ * this makes them useful for writing event handlers and other scenarios where you want to maintain 'this' value
+ */
+
+// syntas arrow function
+const arrowFunction = (param1, param2) => {
+  // function body
+};
+
+// arrow function return expression value
+const arrowFunc = (p1, p2) => p1 + p2
