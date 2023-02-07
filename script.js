@@ -272,18 +272,95 @@ console.log(namePage, numLikes, numDaily); // Tip javascript Viet Nam, 4789, 132
 // i don't think understand it !!!
 
 
-/* ______________________________________________ Arrow Function ______________________________________________*/
+/* ______________________________________________ Functions of array in JS ______________________________________________*/
 
-/**
- * Arrow function is a shorthand for writing anonymous function in JavaScript.
- * Arrow function don't have their own 'this' keyword, the inhetrit 'this' value from surrounding context,
- * this makes them useful for writing event handlers and other scenarios where you want to maintain 'this' value
- */
+/*** concat ***/
+// this method concatenates (joins) 1 or more arrays and return 1 array once, does not change the existing arrays
+console.log(`------ [concat] Functions of array in JS ------`)
+Concat()
+console.log("\n")
 
-// syntas arrow function
-const arrowFunction = (param1, param2) => {
-  // function body
-};
+function Concat() {
+  const a = [1, 2, 3];
+  const b = [4, 5, 6];
+  const c = [7, 8, 9];
+  const all = a.concat(b, c);
+  console.log(all) // 1 -> 9;
+}
 
-// arrow function return expression value
-const arrowFunc = (p1, p2) => p1 + p2
+
+/*** copyWithin ***/
+// this method copies array elements to another position in the array, overwrites the existing values, does not add items to the array
+console.log(`------ [copyWithin] Functions of array in JS ------`)
+CopyWithin()
+console.log("\n")
+
+function CopyWithin() {
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  console.log(numbers.copyWithin(5, 0))
+}
+
+
+/*** entries ***/
+// method returns an Array Iterator object with key/value pairs, does not change the original array
+console.log(`------ [entries] Functions of array in JS ------`)
+Entries()
+console.log("\n")
+
+function Entries() {
+  const animals = ["duck", "cat", "fish", "dog", "chicken"];
+  const f = animals.entries()
+  for (let i of f) {
+    console.log(i)
+  }
+}
+
+
+/*** every ***/
+console.log(`------ [every] Functions of array in JS ------`)
+// method executes a function for each array element
+// return true if the function returns true for all element
+// return false if the function returns false for all element
+// does not execute the function empty element
+// does not change the original array
+Every();
+console.log("\n")
+
+function Every() {
+  const ages = [32, 33, 16, 40];
+
+  console.log(ages.every(checkAge)) // false
+
+  function checkAge(age) {
+    return age > 18
+  };
+}
+
+
+/*** fill ***/
+console.log(`------ [fil] Functions of array in JS ------`)
+// method fills specified elements in an array with a value, overwrites the original array
+// Start and end position can be specified. If not, all elements will be filled
+Fill();
+console.log("\n")
+
+function Fill() {
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  fruits.fill("Kiwi", 2, 4);
+  console.log(fruits)
+}
+
+
+/*** filter ***/
+// method creates a new array filled with elements that pass a test provided by a function
+// does not execute the function for empty elements
+// does not change the original array
+function Filter() {
+  const ages = [32, 33, 16, 40];
+  const result = ages.filter(checkAdult);
+  console.log(result)
+
+  function checkAdult(age) {
+    return age >= 18;
+  }
+}
