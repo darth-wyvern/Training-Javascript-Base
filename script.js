@@ -216,8 +216,6 @@ console.log(`swap1: ${swap1}, swap2: ${swap2}`)
 console.log("\n")
 
 /*** Ignoring values ***/
-// 
-var IgnoringA = 0, IgnoringB = 1
 const ignoring = () => [1, 2, 3]
 const [IgnoringA, , IgnoringB] = ignoring()
 console.log(IgnoringA, IgnoringB); // 1, 3
@@ -255,3 +253,5 @@ console.log(namePage, numLikes, numDaily); // Tip javascript Viet Nam, 4789, 132
 /*** array destructuring ***/
 // i think still don't understand it !!!
 
+
+/* ______________________________________________ Arrow Function ______________________________________________*/
