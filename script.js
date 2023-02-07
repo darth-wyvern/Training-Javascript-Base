@@ -82,6 +82,8 @@ console.log("\n")
 
 /* ______________________________________________ Regular functions and arrow functions ______________________________________________*/
 
+// reference: https://viblo.asia/p/su-khac-nhau-giua-regular-functions-va-arrow-functions-07LKXBbDlV4
+
 // ------------- syntax -------------
 console.log(`------ [syntax] regular vs arrow function ------`)
 /**** ES5 Regular Function ****/
