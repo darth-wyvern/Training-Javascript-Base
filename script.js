@@ -9,33 +9,51 @@
 // declare everywhere and multiple times in scope because it have attribute globally/locally scoped
 // hoisting
 
-// example:
-console.log(`------ var ------`)
-var samurai;
-console.log(samurai);
+// example: (hoisting)
+console.log(`------ [hoisting] var ------`)
+console.log(samurai); // undefined
 
-var samurai = "you can't die if you don't live once"
+samurai = "you can't die if you don't live once"
 console.log(samurai); // you can't die if you don't live once
 
-var samurai = "do you understand?"
+samurai = "do you understand?"
 console.log(samurai); // do you understand?
+
+var samurai; // DECLARED samurai var
 console.log("\n")
 
+console.log(`------ [globally/locally] var ------`)
+var pokemon = 'pikachu';
+console.log(pokemon) // pikachu
+
+updatePokemon('charizard')
+console.log(pokemon) // charizard
+
+// pokemon variable can access anywhere in the program
+function updatePokemon(newname) {
+  pokemon = newname
+}
+
+console.log("\n")
 
 // ------------- let -------------
 // block-scope
-// hoisting
+// hoisting but it can't be used if it hasn't been declared
 
 // example:
 console.log(`------ let ------`)
 let ninja;
 console.log(ninja); // undefined
 
-ninja = 'there is so much thing as randomness';
-console.log(ninja); // there is so much thing as randomness
+ninjaSay('there is so much thing as randomness'); // there is so much thing as randomness
+
+function ninjaSay(message) {
+  ninja = 'ninja: ' + message;
+  console.log(ninja);
+}
 console.log("\n")
 
-// let ninja; // if you declare multiple times => Uncaught SyntaxError (block-scope)
+// let ninja; // redeclare => Uncaught SyntaxError (block-scope)
 
 
 // ------------- const -------------
@@ -251,7 +269,7 @@ console.log(namePage, numLikes, numDaily); // Tip javascript Viet Nam, 4789, 132
 // namePage, numLikes, numDaily get value from `blog object`
 
 /*** array destructuring ***/
-// i think still don't understand it !!!
+// i don't think understand it !!!
 
 
 /* ______________________________________________ Arrow Function ______________________________________________*/
