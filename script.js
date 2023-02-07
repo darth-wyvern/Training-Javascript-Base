@@ -217,6 +217,8 @@ console.log("\n")
 
 /* ______________________________________________ Destructuring javascript ______________________________________________*/
 
+// reference: https://viblo.asia/p/cach-su-dung-destructuring-trong-javascript-oOVlYnrQ58W
+
 /**
  * Destructuring is syntax to get attributes of object or element of array,
  * make the code better.
