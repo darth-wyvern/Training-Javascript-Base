@@ -496,3 +496,166 @@ function IsArray() {
 }
 
 
+/*** join ***/
+console.log(`------ [join] Functions of array in JS ------`)
+// method returns an array as a string, does not change the original array
+// any separator can be specified, the default is comma (,)
+Join()
+console.log("\n")
+
+function Join() {
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  console.log(fruits.join())
+}
+
+
+/*** keys ***/
+console.log(`------ [keys] Functions of array in JS ------`)
+// method returns an Array Iterator object with the keys of an array, does not change the original array
+Keys()
+console.log("\n")
+
+function Keys() {
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  console.log(Object.keys(fruits))
+}
+
+
+/*** lastIndexOf ***/
+console.log(`------ [lastIndexOf] Functions of array in JS ------`)
+// method return the last index (position) of a specified element
+// return -1 if value is not found, start at a specified index and searches from left to right
+// by default search starts at the last element and ends at the first
+// neagtive start values counts from the last element (but still search from right to left)
+LastIndexOf()
+console.log("\n")
+
+function LastIndexOf() {
+  const fruits = ["Apple", "Orange", "Apple", "Mango"];
+  console.log(fruits.lastIndexOf("Apple"))
+
+  const fruits1 = ["Orange", "Apple", "Mango", "Apple", "Banana", "Apple"];
+  console.log(fruits1.lastIndexOf("Apple"))
+}
+
+
+/*** map ***/
+console.log(`------ [map] Functions of array in JS ------`)
+// creates a new array from calling a function for every array element, creates a new array from calling a function for every array element,
+// does not execute the function for empty elements, does not change the original array.
+Map()
+console.log("\n")
+
+function Map() {
+  const numbers = [4, 9, 16, 25];
+  console.log(`[4, 9, 16, 25] = map(sqrt) =>`, numbers.map(Math.sqrt))
+}
+
+
+/*** pop ***/
+console.log(`------ [pop] Functions of array in JS ------`)
+// method removes (pops) the last element of an array, changes the original array, returns the removed element
+Pop()
+console.log("\n")
+
+function Pop() {
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  console.log(`["Banana", "Orange", "Apple", "Mango"] = pop() => `, fruits.pop())
+  console.log(fruits)
+}
+
+
+/*** prototype ***/
+console.log(`------ [prototype] Functions of array in JS ------`)
+// allows you to add new properties and methods to arrays, is a property available with all JavaScript objects
+Prototype()
+console.log("\n")
+
+function Prototype() {
+  Array.prototype.myUcase = function () {
+    for (let i = 0; i < this.length; i++) {
+      this[i] = this[i].toUpperCase();
+    }
+  };
+
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  fruits.myUcase();
+  console.log(`["Banana", "Orange", "Apple", "Mango"] = myUcase() => `, fruits)
+}
+
+
+/*** push ***/
+console.log(`------ [push] Functions of array in JS ------`)
+// method adds new items to the end of an array, method adds new items to the end of an array, returns the new length
+Push()
+console.log("\n")
+
+function Push() {
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  fruits.push("Kiwi", "Lemon");
+  console.log(`["Banana", "Orange", "Apple", "Mango"] = push("Kiwi", "Lemon") => ${fruits}, length => ${fruits.length}`)
+}
+
+
+/*** reduce ***/
+console.log(`------ [reduce] Functions of array in JS ------`)
+// method executes a reducer function for array element, returns a single value: the function's accumulated result
+// does not execute the function for empty array elements, does not change the original array
+Reduce()
+console.log("\n")
+
+function Reduce() {
+  const numbers = [15.5, 2.3, 1.1, 4.7];
+
+  function getSum(total, num) {
+    return total + Math.round(num);
+  }
+
+  console.log(`[15.5, 2.3, 1.1, 4.7] = reduce(getSum) => ${numbers.reduce(getSum, 0)}`)
+}
+
+
+/*** reduceRight ***/
+console.log(`------ [reduceRight] Functions of array in JS ------`)
+// method executes a reducer function for each array element, works from right to left
+// return a single value: the function's accumulated result
+// does not execute the function for empty array elements
+ReduceRight()
+console.log("\n")
+
+function ReduceRight() {
+  const numbers = [2, 45, 30, 100];
+
+  console.log("[2, 45, 30, 100] = reduceRight(getSum) => ", numbers.reduceRight(getSum))
+
+  function getSum(total, num) {
+    return total - num;
+  }
+}
+
+
+/*** reverse ***/
+console.log(`------ [reverse] Functions of array in JS ------`)
+// method reverses the order of the elements in an array, overwrites the original array
+Reverse()
+console.log("\n")
+
+function Reverse() {
+  const numbers = [2, 45, 30, 100];
+  numbers.reverse()
+  console.log(`[2, 45, 30, 100] = reverse() => ${numbers}`)
+}
+
+
+/*** shift ***/
+console.log(`------ [shift] Functions of array in JS ------`)
+// method removes the first item of an array, changes the original array, returns the shifted element
+Shift()
+console.log("\n")
+
+function Shift() {
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  const shifted = fruits.shift()
+  console.log(`["Banana", "Orange", "Apple", "Mango"] = shift() => ${fruits}`)
+  console.log(`shifted = ${shifted}`)
+}
