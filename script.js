@@ -360,9 +360,13 @@ function Fill() {
 
 
 /*** filter ***/
+console.log(`------ [filter] Functions of array in JS ------`)
 // method creates a new array filled with elements that pass a test provided by a function
 // does not execute the function for empty elements
 // does not change the original array
+Filter();
+console.log("\n")
+
 function Filter() {
   const ages = [32, 33, 16, 40];
   const result = ages.filter(checkAdult);
@@ -372,3 +376,123 @@ function Filter() {
     return age >= 18;
   }
 }
+
+
+/*** find ***/
+console.log(`------ [find] Functions of array in JS ------`)
+// method returns the value of the first element that passes a test, executes a function for each array element
+// executes a function for each array element, does not execute the function for empty elements,
+// does not change the original array
+Find()
+console.log("\n")
+
+function Find() {
+  const ages = [3, 10, 18, 20];
+
+  function checkAge(age) {
+    return age > 18;
+  }
+
+  console.log(ages.find(checkAge))
+}
+
+
+/*** findIndex ***/
+console.log(`------ [findIndex] Functions of array in JS ------`)
+// method executes a function for each array element, returns the index (position) of the first element that passes a test
+// returns -1 if no match is found, does not execute the function for empty array elements
+// does not change the original array
+FindIndex()
+console.log("\n")
+
+function FindIndex() {
+  const ages = [3, 10, 18, 20];
+
+  function checkAge(age) {
+    return age > 18;
+  }
+
+  console.log(ages.findIndex(checkAge))
+}
+
+
+/*** forEach ***/
+console.log(`------ [forEach] Functions of array in JS ------`)
+// method calls a function for each element in an array, is not executed for empty elements
+ForEach()
+console.log("\n")
+
+function ForEach() {
+  const ages = [3, 10, 18, 20];
+
+  ages.forEach((value, index) => console.log(`index: ${index}, value: ${value}`))
+}
+
+
+/*** from ***/
+console.log(`------ [from] Functions of array in JS ------`)
+// method returns an array from any object with a length property, returns an array from any iterable object
+From()
+console.log("\n")
+
+function From() {
+  console.log(Array.from("ABCDEFG"))
+}
+
+
+/*** from ***/
+console.log(`------ [from] Functions of array in JS ------`)
+// method returns an array from any object with a length property, returns an array from any iterable object
+From()
+console.log("\n")
+
+function From() {
+  console.log(Array.from("ABCDEFG"))
+}
+
+
+/*** includes ***/
+console.log(`------ [includes] Functions of array in JS ------`)
+// method returns true if an array contains a specified value, returns false if the value is not found, method is case sensitive
+Includes()
+console.log("\n")
+
+function Includes() {
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  console.log(fruits.includes("Mango"))
+
+  const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+  fruits1.includes("Banana", 3); // Banana not in position 3
+}
+
+
+/*** indexOf ***/
+console.log(`------ [indexOf] Functions of array in JS ------`)
+// method return the first position of a specified value, return -1 if the value is not found,
+// start at a specified index and search from the left to right,
+// By default the research starts at the first element and ends at the last
+// negative start values count from the last element (but still from the left to right)
+IndexOf()
+console.log("\n")
+
+function IndexOf() {
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  console.log(fruits.indexOf("Apple"))
+}
+
+
+/*** isArray ***/
+console.log(`------ [isArray] Functions of array in JS ------`)
+// method returns true if an object is an array, otherwise returns false
+IsArray()
+console.log("\n")
+
+function IsArray() {
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  console.log(Array.isArray(fruits))
+
+  let text = "W3Schools";
+  console.log(Array.isArray(text));
+}
+
+
